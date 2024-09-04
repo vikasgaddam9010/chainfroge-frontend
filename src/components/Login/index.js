@@ -27,7 +27,7 @@ const Login = () => {
         if(email !== "" && password !== ""){
             if(passwordError.length === 0 && error.length === 0){
                 setApiState("loading")                
-                const url = "http://localhost:5000/log-in/"
+                const url = "https://chainfroge-backend.onrender.com/log-in/"
                 const options = {
                     method: "POST",
                     headers: {
@@ -37,14 +37,14 @@ const Login = () => {
                 }
                 const serverRes = await fetch(url, options)
                 const serverJsonData = await serverRes.json()
-                console.log(serverJsonData)                
+                             
                 if(serverRes.ok){
                     setApiState("success")
                     setEmail("")
                     setPassword("")
                     setServerState(serverJsonData.message) 
                     Cookies.set("jwt", serverJsonData.jwtToken, {expires: 30})
-                    navigate("/")
+                    navigate("/profile")
 
                 }else{
                     setApiState("failed")

@@ -29,7 +29,7 @@ const Signup = () => {
             if(err.length === 0 && error.length === 0){
                 setApiState("loading")
                 setServerState("")
-                const url = "http://localhost:5000/register/"
+                const url = "https://chainfroge-backend.onrender.com/register/"
                 const options = {
                     method: "POST",
                     headers: {
