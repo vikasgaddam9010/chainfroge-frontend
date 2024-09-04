@@ -19,7 +19,6 @@ const LandingPage = () => {
         <section className="hero">
           <h2>Discover the Future of Decentralization</h2>
           <p>Explore the latest advancements in blockchain technology. Secure, transparent, and revolutionary.</p>
-          <button className="cta-button">Get Started</button>
         </section>
       </main>
       <footer className="footer">
